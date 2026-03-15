@@ -1,0 +1,13 @@
+#!/bin/bash
+# Titan App Launcher
+
+# Define the absolute path to the project directory
+PROJECT_DIR="/Users/ricktienson/Desktop/Titan"
+STREAMLIT_PATH="/opt/homebrew/bin/streamlit"
+
+# Change to the project directory
+cd "$PROJECT_DIR" || exit 1
+
+# Launch Streamlit in the background and open the browser
+# We use --server.headless=true to ensure it starts correctly and opens the browser automatically
+"$STREAMLIT_PATH" run app.py --server.headless=false
